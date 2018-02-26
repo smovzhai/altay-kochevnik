@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <title>Алтай кочевник</title>
     <script>
-        const minMainMenuWidthForHidenPoints = 1100;
+        const minMainMenuWidthForHidenPoints = 1300;
         function bodyResizse() {
 
             var navPointVisibility = (document.getElementById('main-menu-table').clientWidth < minMainMenuWidthForHidenPoints) ? "collapse" : "visible";
@@ -32,7 +32,7 @@
                     <td class="menu_item"><a href="#about-tour">О йога-туре</a></td>
                     <td class="nav-point">&#8226</td>
                     <td class="menu_item"><a href="#rout-day1">Маршрут</a></td>
-                    <td class="nav-point">&#8226</tdclass>
+                    <td class="nav-point">&#8226</td>
                     <td class="menu_item"><a href="#coaches">Преподаватели</a></td>
                     <td class="nav-point">&#8226</td>
                     <td class="menu_item"><a href="#about-tour">Программа</a></td>
@@ -55,8 +55,8 @@
         <div id="header-buttons">
             <table>
                 <tr>
-                    <td><button>Перейти к описанию</button></td>
-                    <td><button>Забронировать место</button></td>
+                    <td><button id="header-left-button">ПЕРЕЙТИ К ОПИСАНИЮ</button></td>
+                    <td><button id="header-right-button">ЗАБРОНИРОВАТЬ МЕСТО</button></td>
                 </tr>
             </table>
         </div>
@@ -93,8 +93,7 @@
                 <p>Первая прокладка маршрута</p>
             </div>
             <div id="about-tour-column2-bottom-left"><img src="images/about-bottom-left.jpg"></div>
-            <div id="about-tour-column2-top-right"><img src="images/about-top-right.jpg"></div>
-            <!--<div id="about-tour-column2-bottom-left"></div>-->
+            <div id="about-tour-column2-top-right"><img src="images/about-top-right.jpg"></div>           
             <div id="about-tour-column2-bottom-right">
                 <h1>2018</h1>
                 <p>История, которую напишешь ты сам</p>
@@ -107,8 +106,8 @@
         var animation;
         var startTimeAnimationTime;
         const animationDurationInMiliSeconds = 1500;
-        const startTopPositionInPersent = 54;
-        const endTopPositionInPercent = 34;
+        const startTopPositionInPersent = 53;
+        const endTopPositionInPercent = 32;
         const totalLehgthInPercent = startTopPositionInPersent - endTopPositionInPercent;
 
         const acleleration = 2 * totalLehgthInPercent / animationDurationInMiliSeconds / animationDurationInMiliSeconds;
