@@ -1,0 +1,252 @@
+body {
+    color: #8f8f8f;
+    font: 12px Tahoma, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+}
+
+
+body {
+    min-width: 1000px;
+    background-color: white;
+}
+
+@font-face {
+    font-family: Brush_Script; 
+    src: url(../fonts/Brush_Script.ttf);
+   }
+@font-face {
+    font-family: Proxima_Nova_Semibold; 
+    src: url(../fonts/Proxima_Nova_Semibold.otf);
+   }
+@font-face {
+    font-family: ProximaNova-Bold; 
+    src: url(../fonts/ProximaNova-Bold.otf);
+   }
+@font-face {
+    font-family: ProximaNova-Reg; 
+    src: url(../fonts/ProximaNova-Reg.otf);
+   }
+@font-face {
+    font-family: SkolarPE-Bold; 
+    src: url(../fonts/SkolarPE-Bold.otf);
+   }
+#header-width-height-proportion {
+    height: 0;
+    padding-bottom: 51.5%; /* 16:9 */
+    position: relative;
+}
+
+#header-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 59%;
+    background-image: url("../images/header-top.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+#header-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 56%;
+    background-image: url("../images/header-bottom.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 3;
+}
+
+#header-center {
+    position: absolute;
+    top: 53% /*32%*/;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background-image: url("../images/Altay.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    z-index: 100;
+}
+
+    nav td {
+        color: white;
+        text-align: center;
+        font-family: ProximaNova-Reg;
+        font-size: 10pt;
+    }
+
+.menu_item {
+    width: 1%;
+    white-space: nowrap;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+    nav a:link {
+        color: white;
+    }
+
+    nav a:hover {
+        color: white;
+        border-bottom: 1px solid #d2ab2d;
+        padding-bottom: 5px;
+    }
+
+    nav a:visited {
+        color: white;
+    }
+
+#main-menu-table {
+    position: relative;
+    width: 100%;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+#header-foter {
+    position: absolute;
+    bottom: 20%;
+    left: 7%;
+    z-index: 100;
+}
+
+    #header-foter p {
+        color: white;
+        font-size: 20pt;
+        font-family: ProximaNova-Reg;
+    }
+
+#header-buttons {
+    position: absolute;
+    bottom: 12%;
+    left: 7%;
+    z-index: 100;
+}
+
+    #header-buttons button {
+        width: 180px;
+        height: 40px;
+        margin-right: 30px;
+        color: white;
+        font-size: 12pt;
+        font-family: ProximaNova-Reg;
+        background-color: transparent;
+        border-color: #ffd800;
+        border-radius: 5px;
+        border-width: 3px;
+        transition: background-color 2s;
+    }
+
+        #header-buttons button:hover {
+            background-color: #ffa800;
+        }
+
+
+#about-tour {
+    
+    width: 970px;
+    padding-bottom:50%;
+    margin: 0 auto;
+    color: black;
+    position: relative;
+    align-content: center;
+}
+
+    #about-tour p {
+        font-size: 11px;
+        font-family: ProximaNova-Reg;
+    }
+
+    #about-tour h1 {
+        font-family: SkolarPE-Bold;
+    }
+
+#about-tour-column1 {
+    position: relative;
+    float: left;
+    width: 330px;   
+}
+
+
+#about-tour-column1-top {
+    position: relative;
+    width: 100%;
+    top: 0;
+}
+
+#about-tour-column1-bottom {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+    #about-tour-column1-bottom h1 {
+        color: #ffca3e;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-right: 20px;
+        font-family: ProximaNova-Reg;
+    }
+
+    #about-tour-column1-bottom p {
+        margin-top: 0;
+        padding-top: 0;
+        margin-right: 20px;
+    }
+
+
+#about-tour-column2 {
+    position: relative;
+    float: right;
+    width: 610px;
+    height:490px;
+   
+    
+}
+#about-tour-column2 h1 {
+    font-size: 15pt;
+}
+#about-tour-column2-top-left {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+}
+#about-tour-column2-bottom-left {
+    position: absolute;   
+    z-index: 1;
+    bottom: 0;
+    left:0;
+ 
+}
+#about-tour-column2-bottom-right {
+    position: absolute;
+    bottom:100px;
+    right: 100px;
+    width: 100px;
+}
+#about-tour-column2-top-right {
+    position: absolute;   
+    z-index: 2;
+    top: 0;
+    right:0;
+ 
+}
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <title>Алтай кочевник</title>
+    <script>
+        const minMainMenuWidthForHidenPoints = 1100;
+        function bodyResizse() {
+
+            var navPointVisibility = (document.getElementById('main-menu-table').clientWidth < minMainMenuWidthForHidenPoints) ? "collapse" : "visible";
+
+            var navPoints = document.getElementsByClassName("nav-point");
+            var i;
+            for (i = 0; i < navPoints.length; i++) {
+                navPoints[i].style.visibility = navPointVisibility;
+            }
+        }
+
+    </script>
+</head>
+<body onresize="bodyResizse()">
+    <div id="header-width-height-proportion">
+        <div id="header-top"></div>
+        <div id="header-bottom"></div>
+        <div id="header-center"></div>
+
+        <nav>
+            <table id="main-menu-table">
+                <tr>
+                    <td class="menu_item"><a href="#about-tour">О йога-туре</a></td>
+                    <td class="nav-point">&#8226</td>
+                    <td class="menu_item"><a href="#rout-day1">Маршрут</a></td>
+                    <td class="nav-point">&#8226</tdclass>
+                    <td class="menu_item"><a href="#coaches">Преподаватели</a></td>
+                    <td class="nav-point">&#8226</td>
+                    <td class="menu_item"><a href="#about-tour">Программа</a></td>
+                    <td class="nav-point">&#8226</td>
+                    <td class="menu_item"><img src="images/EGA.png"></td>
+                    <td class="nav-point">&#8226</td>
+                    <td class="menu_item"><a href="#about-tour">Снаряжение</a></td>
+                    <td class="nav-point">&#8226</td>
+                    <td class="menu_item"><a href="#about-tour">Стоимость</a></td>
+                    <td class="nav-point">&#8226</td>
+                    <td class="menu_item"><a href="#about-tour">Контакты</a></td>
+                    <td class="nav-point">&#8226</td>
+                    <td class="menu_item">8 921 339 87 42</td>
+                </tr>
+            </table>
+        </nav>
+        <div id="header-foter">
+            <p>Йога-тур "Алтай Кочевник 2018"<br>по Казахстану с 30 июля по 14 августа</p>
+        </div>
+        <div id="header-buttons">
+            <table>
+                <tr>
+                    <td><button>Перейти к описанию</button></td>
+                    <td><button>Забронировать место</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <td width="*"></td>
+            <td width="300px"></td>
+            <td width="300px"></td>
+            <td width="*"></td>
+        </tr>
+    </table>
+    <div id="about-tour">
+        <div id="about-tour-column1">
+            <div id="about-tour-column1-top">
+                <h1>О йога-туре</h1>
+                <p>Первые маршруты по Горному Алтаю мы начали прокладывать еще в 1997 году, не догадываясь, что станем первооткрывателями уникального движения в России - йога-туризм. За годы многое поменялось. Неизменно осталось только одно - наше отношение: путешествие как образ жизни, как состояние.</p>
+                <p>Сейчас Петербургская школа йоги организует около 17 йога-туров по всему миру за год, но этот йога-тут для нас остается особенным! Передвигаясь на вездеходном автобусе, совершая переходы по горным трекам, отдыхая и практикия йогу, за 16 дней мы побываем в местах, которые отсутствуют в путеводителях и справочниках. Каким будет предстоящий йога-тур "Алтай Кочевник" для Вас?</p>
+            </div>
+            <div id="about-tour-column1-bottom">
+                <table>
+                    <tr>
+                        <td><h1>2</h1><p>Недели</p></td>
+                        <td><h1>3</h1><p>Мастера</p></td>
+                        <td><h1>12</h1><p>Мест силы</p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="about-tour-column2">
+            <div id="about-tour-column2-top-left">
+                <h1>1997</h1>
+                <p>Первая прокладка маршрута</p>
+            </div>
+            <div id="about-tour-column2-bottom-left"><img src="images/about-bottom-left.jpg"></div>
+            <div id="about-tour-column2-top-right"><img src="images/about-top-right.jpg"></div>
+            <!--<div id="about-tour-column2-bottom-left"></div>-->
+            <div id="about-tour-column2-bottom-right">
+                <h1>2018</h1>
+                <p>История, которую напишешь ты сам</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var div = document.getElementById('header-center');
+        var animation;
+        var startTimeAnimationTime;
+        const animationDurationInMiliSeconds = 1500;
+        const startTopPositionInPersent = 54;
+        const endTopPositionInPercent = 34;
+        const totalLehgthInPercent = startTopPositionInPersent - endTopPositionInPercent;
+
+        const acleleration = 2 * totalLehgthInPercent / animationDurationInMiliSeconds / animationDurationInMiliSeconds;
+        const v0 = acleleration * animationDurationInMiliSeconds;
+
+        function move() {
+            var currentTime = (new Date()).getTime() - startTimeAnimationTime;
+            if (currentTime < animationDurationInMiliSeconds) {                
+                div.style.top = (startTopPositionInPersent - v0 * currentTime + acleleration * currentTime * currentTime / 2) + '%';
+                animation = requestAnimationFrame(move);
+            }
+        }
+
+        startTimeAnimationTime = (new Date()).getTime();
+        animation = requestAnimationFrame(move);
+
+
+    </script>
+
+</body>
+</html>
